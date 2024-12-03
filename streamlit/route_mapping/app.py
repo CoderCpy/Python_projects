@@ -100,7 +100,7 @@ if button:
     placeholder.text(tooltip)
     
     with st.sidebar:
-      st.sidebar.title('Turn by Turn Directions',)
+      st.sidebar.title('Turn by Turn Navigation',)
       step=r_step[0]['instruction']
       st.text(step)
       for i in range(len(r_step)):
