@@ -4,8 +4,8 @@ from streamlit_folium import st_folium
 from streamlit_folium import folium_static
 import requests
 
-st.set_page_config(page_title='Route Finder', layout='wide')
-st.title('Route Finder')
+st.set_page_config(page_title='Route Mapping', layout='wide')
+st.title('Route Mapping')
 
 st.markdown('This app uses the [OpenRouteService API](https://openrouteservice.org/) '
   'to geocode and get directions between the specified origin and destination.')
