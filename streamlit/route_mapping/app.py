@@ -3,7 +3,6 @@ import streamlit as st
 from streamlit_folium import st_folium
 from streamlit_folium import folium_static
 import requests
-from itertools import chain
 
 st.set_page_config(page_title='Route Finder', layout='wide')
 st.title('Route Finder')
