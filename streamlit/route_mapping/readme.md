@@ -9,9 +9,9 @@ by turn direction.
 
 ## Key Technologies
 
-Python: The primary programming language used for the analysis.
-Folium: Data wrangling of the Python ecosystem and the mapping strengths of the Leaflet.js library.
-Streamlit: An open-source Python framework.
+- **Python**: The primary programming language used for the analysis.
+- **Folium**: Data wrangling of the Python ecosystem and the mapping strengths of the Leaflet.js library.
+- **Streamlit**: An open-source Python framework.
 
 ## How to Use
 
