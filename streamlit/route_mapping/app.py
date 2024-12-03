@@ -21,7 +21,6 @@ button = st.button('Get Directions')
 # Define a placeholder to display the distance and download button once computed.    
 placeholder = st.empty()
 
-
 ORS_API_KEY = st.secrets['ORS_API_KEY']
 
 @st.cache_data
@@ -71,8 +70,6 @@ def get_directions(origin_name, destination_name):
     tooltip = 'Distance by {}: {}km'.format(mode, distance)
     r_step = data['features'][0]['properties']['segments'][0]['steps']
     return route_xy, tooltip, r_step
-    
-c3, c4 = st.columns(2)
 
 m = folium.Map(location=[39.949610, -75.150282], zoom_start=5)
 if origin:
@@ -102,19 +99,16 @@ if button:
     folium.PolyLine(route_xy, tooltip=tooltip).add_to(m)
     placeholder.text(tooltip)
     
-    with c4:
-        st.text('Turn by Turn Directions',)
-        step=r_step[0]['instruction']
-        st.text(step)
-        for i in range(len(r_step)):
-            step=r_step[i]['instruction']
-            st.text(step)
+    with st.sidebar:
+      st.sidebar.title('Turn by Turn Directions',)
+      step=r_step[0]['instruction']
+      st.text(step)
+      for i in range(len(r_step)):
+          step=r_step[i]['instruction']
+          st.text(step)          
  
-    m.save('directions.html')
-    with open('directions.html') as file:
-        placeholder.download_button('Download Directions', data=file, file_name='directions.html')
+m.save('directions.html')
+with open('directions.html') as file:
+    placeholder.download_button('Download Directions', data=file, file_name='directions.html')
         
-#keep map area in left column
-with c3:
-    folium_static(m, width=800)
-
+folium_static(m, width=800)
