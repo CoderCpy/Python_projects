@@ -1,5 +1,6 @@
 import folium
 import streamlit as st
+from streamlit_folium import st_folium
 from streamlit_folium import folium_static
 import pandas as pd
 from pyproj import Geod
