@@ -22,4 +22,4 @@ Note: Because the dataset is full (over 6500 lines of data) in it's inital sessi
 
 ## Acknowledgement
 
-This project was completed with the research of varying methods but ultimately pulling from Folium Route Maps Builder by Kenneth Burchfiel.
+This project was completed with the research of varying python methods but ultimately pulling from Folium Route Maps Builder by Kenneth Burchfiel.
